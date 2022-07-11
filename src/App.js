@@ -11,10 +11,14 @@ import { app } from './firebase-config';
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
   let navigate = useNavigate();
+  
   const handleAction = (id) => {
     const authentication = getAuth();
     if (id === 1) {
